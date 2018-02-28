@@ -6,6 +6,9 @@ let source = true;
 let lastRod = document.getElementById("rod3");
 let count;
 
+let midRod = document.getElementById("rod2");
+let count2;
+
 handleClick = function (event) {
     let rod = event.currentTarget;
     let last = rod.lastElementChild;
@@ -32,8 +35,9 @@ handleClick = function (event) {
             rod.appendChild(emptyDivChild);
         }
         count = lastRod.childElementCount;
+        count2 = midRod.childElementCount;
         source = true;
-        console.log(count);
+        
 
         if (count === 4) {
             destination.appendChild(winText);
@@ -42,6 +46,14 @@ handleClick = function (event) {
                 rods[i].removeEventListener("click", handleClick);
 
 
+            }
+        }
+
+        if (count2 === 4) {
+            destination.appendChild(winText);
+
+            for (let i = 0; i < rods.length; i++) {
+                rods[i].removeEventListener("click", handleClick);
             }
         }
     }
