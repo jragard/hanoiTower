@@ -1,6 +1,3 @@
-// let discParent = document.getElementsByClassName(".rod");
-// let grab = discParent.firstElementChild;
-
 let source = true;
 
 let lastRod = document.getElementById("rod3");
